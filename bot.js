@@ -5,11 +5,11 @@ const { existsSync, writeFileSync } = require('fs')
 
 const SESSION_ID = 'levanter_SAMKIEL' // Edit this line only, don't remove ' <- this symbol
 
-if (!existsSync('levanter')) {
+if (!existsSync('SAMKIELAI')) {
   console.log('Cloning the repository...')
   const cloneResult = spawnSync(
     'git',
-    ['clone', 'https://github.com/lyfe00011/levanter.git', 'levanter'],
+    ['clone', 'https://github.com/samkiel488/SAMKIELAI.git', 'SAMKIELAI'],
     {
       stdio: 'inherit',
     }
@@ -29,7 +29,7 @@ if (!existsSync('levanter')) {
 
   console.log('Installing dependencies...')
   const installResult = spawnSync('yarn', ['install', '--network-concurrency', '3'], {
-    cwd: 'levanter',
+    cwd: 'SAMKIELAI',
     stdio: 'inherit',
   })
 
@@ -38,4 +38,4 @@ if (!existsSync('levanter')) {
   }
 }
 
-spawnSync('yarn', ['start'], { cwd: 'levanter', stdio: 'inherit' })
+spawnSync('yarn', ['start'], { cwd: 'SAMKIELAI', stdio: 'inherit' })
