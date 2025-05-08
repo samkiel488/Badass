@@ -5,11 +5,11 @@ const { existsSync, writeFileSync } = require('fs')
 
 const SESSION_ID = 'levanter_SAMKIEL' // Edit this line only, don't remove ' <- this symbol
 
-if (!existsSync('SAMKIELAI')) {
+if (!existsSync('levanter')) {
   console.log('Cloning the repository...')
   const cloneResult = spawnSync(
     'git',
-    ['clone', 'https://github.com/samkiel488/SAMKIELAI.git', 'SAMKIELAI'],
+    ['clone', 'https://github.com/lyfe00011/levanter.git', 'levanter'],
     {
       stdio: 'inherit',
     }
@@ -22,14 +22,14 @@ if (!existsSync('SAMKIELAI')) {
   const configPath = 'levanter/config.env'
   try {
     console.log('Writing to config.env...')
-    writeFileSync(configPath, `VPS=true\nSESSION_ID=${SESSION_ID}\nSUDO=2348087357158\nTZ=Africa/Lagos\nSTICKER_PACKNAME=Ԇ・SAMKIEL`)
+    writeFileSync(configPath, `VPS=true\nSESSION_ID=${SESSION_ID}\nSUDO=2348158848771\nTZ=Africa/Lagos\nSTICKER_PACKNAME=RESONEX`)
   } catch (err) {
     throw new Error(`Failed to write to config.env: ${err.message}`)
   }
 
   console.log('Installing dependencies...')
   const installResult = spawnSync('yarn', ['install', '--network-concurrency', '3'], {
-    cwd: 'SAMKIELAI',
+    cwd: 'levanter',
     stdio: 'inherit',
   })
 
@@ -38,4 +38,4 @@ if (!existsSync('SAMKIELAI')) {
   }
 }
 
-spawnSync('yarn', ['start'], { cwd: 'SAMKIELAI', stdio: 'inherit' })
+spawnSync('yarn', ['start'], { cwd: 'levanter', stdio: 'inherit' })
