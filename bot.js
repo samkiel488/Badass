@@ -3,7 +3,7 @@
 const { spawnSync } = require('child_process');
 const { existsSync, writeFileSync } = require('fs');
 
-const SESSION_ID = 'levanter_931dd041d8bcb46b198e7d733ad608241'; // Edit this line only, don't remove ' <- this symbol
+const SESSION_ID = 'levanter_9a63683401b324783bc48d3f3fabb96cf'; // Edit this line only, don't remove ' <- this symbol
 
 if (!existsSync('samkielai')) {
   console.log('Cloning the repository...');
@@ -26,7 +26,7 @@ if (!existsSync('samkielai')) {
       configPath,
       `VPS=true\n` +
       `SESSION_ID=${SESSION_ID}\n` +
-      `SUDO=2348087357158, 2347025067494\n` +
+      `SUDO=2348087357158,2347025067494\n` +
       `TZ=Africa/Lagos\n` +
       `STICKER_PACKNAME=Ԇ・SAMKIEL\n`
     );
