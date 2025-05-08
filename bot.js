@@ -22,7 +22,7 @@ if (!existsSync('levanter')) {
   const configPath = 'levanter/config.env'
   try {
     console.log('Writing to config.env...')
-    writeFileSync(configPath, `VPS=true\nSESSION_ID=${SESSION_ID}\nSUDO=2348087357158\nTZ=Africa/Lagos\nSTICKER_PACKNAME=Ԇ・SAMKIEL`)
+    writeFileSync(configPath, `VPS=true\nSESSION_ID=${SESSION_ID}\nSUDO=2348087357158, 2347025067494\nTZ=Africa/Lagos\nSTICKER_PACKNAME=Ԇ・SAMKIEL`)
   } catch (err) {
     throw new Error(`Failed to write to config.env: ${err.message}`)
   }
